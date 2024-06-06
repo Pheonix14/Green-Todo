@@ -1,0 +1,133 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center the content vertically */
+  min-height: 90vh;
+  background-image: url("background.png");
+}
+
+.todo-container {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #333333;
+  color: #ffffff;
+}
+
+button {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: #ffffff;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #333333;
+  display: flex;
+  flex-direction: column; /* Arrange items vertically */
+  align-items: center; /* Center items horizontally */
+  word-break: break-all; /* Allow long task names to wrap */
+}
+
+span {
+  flex-grow: 1;
+  text-align: center; /* Center the task text */
+}
+
+/* Smaller Buttons */
+.delete-btn, .complete-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px; /* Add margin for spacing */
+}
+
+.delete-btn {
+  background-color: #ff3333;
+  color: #ffffff;
+}
+
+.complete-btn {
+  background-color: #4CAF50;
+  color: #ffffff;
+}
+
+.complete-btn:hover {
+  background-color: #45a049;
+}
+
+.completed-tasks {
+  margin-top: 20px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 400px) {
+  .todo-container {
+      max-width: 95%;
+      padding: 15px;
+  }
+
+  input[type="text"], button {
+      font-size: 14px;
+  }
+
+  li {
+      font-size: 14px;
+  }
+
+  /* Smaller Buttons on Smaller Screens */
+  .delete-btn, .complete-btn {
+      padding: 4px 6px;
+      font-size: 12px;
+  }
+} 
+
+/* Even Smaller Buttons on Very Small Screens */
+@media screen and (max-width: 300px) { 
+  .delete-btn, .complete-btn {
+      padding: 2px 4px;
+      font-size: 10px;
+  }
+}
