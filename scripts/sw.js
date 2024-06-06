@@ -20,10 +20,17 @@ registerRoute(
   new StaleWhileRevalidate()
 );
 
-// Cache the HTML pages with a network-first strategy
+// Cache HTML pages using CacheFirst strategy
 registerRoute(
   ({ request }) => request.destination === 'document',
-  new StaleWhileRevalidate()
+  new CacheFirst({
+    cacheName: 'html-cache',
+    plugins: [
+      new workbox.cacheableResponse.CacheableResponsePlugin({
+        statuses: [0, 200],
+      }),
+    ],
+  })
 );
 
 // Activate the service worker
