@@ -7,7 +7,7 @@ body {
   align-items: center;
   justify-content: center; /* Center the content vertically */
   min-height: 90vh;
-  background-image: url("background.png");
+  background-image: url("/icons/background.png");
 }
 
 .todo-container {
